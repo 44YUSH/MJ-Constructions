@@ -10,6 +10,27 @@
         gap: 1.5rem;
         font-size: 1.1rem;
     }
+    .menu-links {
+        width: 200px;
+        right: 0;
+        text-align: center;
+        background-color: rgba(6, 35, 60, 0.8);
+        backdrop-filter: blur(5px);
+        position: fixed;
+        top: 10vh;
+    }
+    .menu-links li {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    .menu-links a {
+        font-size: 1.2rem;
+        padding: 15px 20px;
+        width: 100%;
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -21,13 +42,38 @@
         padding: 0 1.5rem;
     }
     .menu-links {
-        width: 100%;
-        left: 0;
+        width: 200px;
+        right: 0;
         text-align: center;
+        background-color: rgba(6, 35, 60, 0.8);
+        backdrop-filter: blur(5px);
+        position: fixed;
+        top: 8vh;
+    }
+    .menu-links li {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
     }
     .menu-links a {
         font-size: 1.2rem;
-        padding: 15px;
+        padding: 15px 20px;
+        width: 100%;
+        text-align: center;
+    }
+    .hero-content {
+        padding-left: 2rem;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content h1 .gradient-text {
+        font-size: 3.5rem;
+    }
+    .hero-content h1 .gradient-text::after {
+        bottom: -8px;
+        height: 2px;
     }
     .about-content h2 {
         font-size: 2rem;
@@ -57,13 +103,37 @@
         height: 7vh;
         padding: 0 1rem;
     }
+    .menu-links {
+        top: 7vh;
+        width: 200px;
+    }
+    .menu-links li {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
     .hamburger-icon {
         height: 20px;
         width: 25px;
     }
     .menu-links a {
         font-size: 1.1rem;
-        padding: 12px;
+        padding: 12px 15px;
+        text-align: center;
+    }
+    .hero-content {
+        padding-left: 1.5rem;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content h1 .gradient-text {
+        font-size: 3rem;
+    }
+    .hero-content h1 .gradient-text::after {
+        bottom: -6px;
+        height: 2px;
     }
     .about-content h2 {
         font-size: 1.8rem;
