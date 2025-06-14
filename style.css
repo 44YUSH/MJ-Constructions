@@ -22,7 +22,7 @@ a, .btn{
 }
 
 /* Desktop NAV */
-.logo img{
+.logo img {
     width: 3.2rem;
 }
 
@@ -31,15 +31,15 @@ a, .btn{
     display: block;
 }
 
-.logo:hover{
+.logo:hover {
     cursor: pointer;
 }
 
-nav, .nav-links{
+nav, .nav-links {
     display: flex;
 }
 
-nav{
+nav {
     justify-content: space-between;
     align-items: center;
     height: 10vh;
@@ -54,11 +54,11 @@ nav{
 }
 
 nav.scrolled {
-    background-color: rgba(6, 35, 60, 0.8);
+    background: linear-gradient(135deg, rgba(6, 35, 60, 0.9), rgba(6, 35, 60, 0.8));
     backdrop-filter: blur(5px);
 }
 
-.nav-links{
+.nav-links {
     gap: 3.5rem;
     list-style: none;
     font-size: 1.2rem;
@@ -89,7 +89,6 @@ nav.scrolled {
 }
 
 /* Hamburger Menu */
-
 #hamburger-nav {
     padding: 0 2rem;
     position: fixed;
@@ -103,17 +102,17 @@ nav.scrolled {
 }
 
 #hamburger-nav.scrolled {
-    background-color: rgba(6, 35, 60, 0.8);
+    background: linear-gradient(135deg, rgba(6, 35, 60, 0.9), rgba(6, 35, 60, 0.8));
     backdrop-filter: blur(5px);
 }
 
-.hamburger-menu{
+.hamburger-menu {
     position: relative;
     display: inline-block;
     margin-right: 0;
 }
 
-.hamburger-icon{
+.hamburger-icon {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -123,7 +122,7 @@ nav.scrolled {
     transition: all 0.3s ease;
 }
 
-.hamburger-icon span{
+.hamburger-icon span {
     width: 100%;
     height: 3px;
     background-color: white;
@@ -134,7 +133,7 @@ nav.scrolled {
     position: absolute;
     top: 100%;
     right: 0%;
-    background-color: rgba(6, 35, 60, 0.8);
+    background: linear-gradient(135deg, rgba(6, 35, 60, 0.9), rgba(6, 35, 60, 0.8));
     backdrop-filter: blur(5px);
     width: 200px;
     max-height: 0;
@@ -173,27 +172,27 @@ nav.scrolled {
     padding: 10px 0;
 }
 
-.hamburger-icon.open span:first-child{
+.hamburger-icon.open span:first-child {
     transform: rotate(45deg) translate(10px, 5px);
 }
 
-.hamburger-icon.open span:nth-child(2){
+.hamburger-icon.open span:nth-child(2) {
     opacity: 0;
 }
 
-.hamburger-icon.open span:last-child{
+.hamburger-icon.open span:last-child {
     transform: rotate(-45deg) translate(10px, -5px);
 }
 
-.hamburger-icon span:first-child{
+.hamburger-icon span:first-child {
     transform: none;
 }
 
-.hamburger-icon span:first-child{
+.hamburger-icon span:first-child {
     opacity: 1;
 }
 
-.hamburger-icon span:first-child{
+.hamburger-icon span:first-child {
     transform: none;
 }
 
@@ -1091,7 +1090,7 @@ nav.scrolled {
 }
 
 .form-group textarea {
-    height: 150px;
+    height: 320px;
     resize: vertical;
     padding-top: 1.2rem;
 }
@@ -1213,7 +1212,7 @@ nav.scrolled {
     }
 
     .form-group textarea {
-        height: 150px;
+        height: 270px;
     }
 }
 
@@ -1259,7 +1258,7 @@ nav.scrolled {
 
     .form-group textarea {
         padding-top: 1rem;
-        height: 150px;
+        height: 220px;
     }
 
     .form-group label {
@@ -1596,6 +1595,12 @@ footer {
     font-size: 0.9rem;
 }
 
+.footer-bottom .credit {
+    font-size: 0.70rem;
+    opacity: 0.3;
+    margin-top: 0.5rem;
+}
+
 @media (max-width: 768px) {
     .footer-content {
         grid-template-columns: 1fr;
@@ -1697,4 +1702,136 @@ footer {
     font-weight: 500;
     font-style: italic;
     margin: 0.5rem 0;
+}
+
+.projects-cta {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.view-more-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #FF6B00, #FF8C00);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.view-more-btn:hover {
+    background: transparent;
+    border-color: #FF6B00;
+    color: #FF6B00;
+}
+
+@media screen and (max-width: 768px) {
+    .projects-cta {
+        margin-top: 2rem;
+    }
+    .view-more-btn {
+        padding: 0.8rem 1.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .projects-cta {
+        margin-top: 1.5rem;
+    }
+    .view-more-btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.85rem;
+    }
+}
+
+#projects-hero {
+    height: 50vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./Assets/MJTemple.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.projects-hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.projects-hero-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+#all-projects {
+    padding: 4rem 0;
+}
+
+.project-details {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.project-details span {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+@media screen and (max-width: 768px) {
+    .projects-hero-content h1 {
+        font-size: 3rem;
+    }
+    .projects-hero-content p {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .projects-hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .projects-hero-content p {
+        font-size: 1rem;
+    }
+}
+
+.map-container {
+    margin-top: 2rem;
+}
+
+.map-container iframe {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.map-container iframe:hover {
+    transform: scale(1.02);
+}
+
+@media screen and (max-width: 768px) {
+    .map-container {
+        margin-top: 1.5rem;
+    }
+    
+    .map-container iframe {
+        height: 180px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .map-container {
+        margin-top: 1rem;
+    }
+    
+    .map-container iframe {
+        height: 160px;
+    }
 }
