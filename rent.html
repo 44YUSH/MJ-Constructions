@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Equipment - MJ Constructions</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">
+            <a href="index.html"><img src="./Assets/MJC_bg-2.png" alt="MJwhite"></a>
+        </div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="index.html#about">about</a></li>
+                <li><a href="index.html#projects">projects</a></li>
+                <li><a href="index.html#carriers">careers</a></li>
+                <li><a href="index.html#rent">rent</a></li>
+                <li><a href="index.html#contact">contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <div class="logo">
+            <a href="index.html"><img src="./Assets/MJC_bg-2.png" alt="MJwhite"></a>
+        </div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="index.html#about" onclick="toggleMenu()">about</a></li>
+                <li><a href="index.html#projects" onclick="toggleMenu()">projects</a></li>
+                <li><a href="index.html#carriers" onclick="toggleMenu()">careers</a></li>
+                <li><a href="index.html#rent" onclick="toggleMenu()">rent</a></li>
+                <li><a href="index.html#contact" onclick="toggleMenu()">contact</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" style="background-image: url('./Assets/vehicles/rentBG.jpeg');">
+        <div class="hero-content">
+            <h1 style="font-size: 4rem; font-weight: 700;">Rent Our Equipment</h1>
+            <hr style="width: 100%; max-width: 600px; margin: 1rem 0; border: none; height: 3px; background: linear-gradient(135deg, #FF6B00, #FFA500);">
+            <p>Quality construction equipment for your projects</p>
+        </div>
+    </section>
+
+    <section id="all-equipment">
+        <div class="equipment-container">
+            <h2 class="section-title">Available Equipment</h2>
+            <p class="equipment-intro">Choose from our wide range of well-maintained construction equipment</p>
+
+            <div class="equipment-grid">
+                <div class="equipment-card">
+                    <img src="./Assets/equipment/excavator.jpg" alt="Excavator">
+                    <div class="equipment-info">
+                        <h3>Excavator</h3>
+                        <p>Heavy-duty excavators for all your digging needs</p>
+                        <ul class="equipment-details">
+                            <li>Multiple sizes available</li>
+                            <li>Daily and weekly rates</li>
+                            <li>Operator available</li>
+                            <li>Maintenance included</li>
+                        </ul>
+                        <div class="equipment-price">
+                            <span>Starting from ₹15,000/day</span>
+                        </div>
+                        <button class="rent-btn">Rent Now</button>
+                    </div>
+                </div>
+
+                <div class="equipment-card">
+                    <img src="./Assets/equipment/bulldozer.jpg" alt="Bulldozer">
+                    <div class="equipment-info">
+                        <h3>Bulldozer</h3>
+                        <p>Powerful bulldozers for earthmoving projects</p>
+                        <ul class="equipment-details">
+                            <li>Various blade sizes</li>
+                            <li>Flexible rental terms</li>
+                            <li>Maintenance included</li>
+                            <li>Fuel service available</li>
+                        </ul>
+                        <div class="equipment-price">
+                            <span>Starting from ₹12,000/day</span>
+                        </div>
+                        <button class="rent-btn">Rent Now</button>
+                    </div>
+                </div>
+
+                <div class="equipment-card">
+                    <img src="./Assets/equipment/roller.jpg" alt="Road Roller">
+                    <div class="equipment-info">
+                        <h3>Road Roller</h3>
+                        <p>Professional road rollers for perfect compaction</p>
+                        <ul class="equipment-details">
+                            <li>Single and double drum</li>
+                            <li>Short and long-term rentals</li>
+                            <li>Delivery available</li>
+                            <li>Operator training</li>
+                        </ul>
+                        <div class="equipment-price">
+                            <span>Starting from ₹8,000/day</span>
+                        </div>
+                        <button class="rent-btn">Rent Now</button>
+                    </div>
+                </div>
+
+                <div class="equipment-card">
+                    <img src="./Assets/equipment/truck.jpg" alt="Dump Truck">
+                    <div class="equipment-info">
+                        <h3>Dump Truck</h3>
+                        <p>Heavy-duty dump trucks for material transport</p>
+                        <ul class="equipment-details">
+                            <li>Multiple capacity options</li>
+                            <li>Daily and weekly rates</li>
+                            <li>Fuel service available</li>
+                            <li>24/7 support</li>
+                        </ul>
+                        <div class="equipment-price">
+                            <span>Starting from ₹10,000/day</span>
+                        </div>
+                        <button class="rent-btn">Rent Now</button>
+                    </div>
+                </div>
+
+                <div class="equipment-card">
+                    <img src="./Assets/equipment/loader.jpg" alt="Wheel Loader">
+                    <div class="equipment-info">
+                        <h3>Wheel Loader</h3>
+                        <p>Versatile wheel loaders for material handling</p>
+                        <ul class="equipment-details">
+                            <li>Various bucket sizes</li>
+                            <li>All-terrain capability</li>
+                            <li>Operator available</li>
+                            <li>Maintenance included</li>
+                        </ul>
+                        <div class="equipment-price">
+                            <span>Starting from ₹9,000/day</span>
+                        </div>
+                        <button class="rent-btn">Rent Now</button>
+                    </div>
+                </div>
+
+                <div class="equipment-card">
+                    <img src="./Assets/equipment/crane.jpg" alt="Mobile Crane">
+                    <div class="equipment-info">
+                        <h3>Mobile Crane</h3>
+                        <p>High-capacity mobile cranes for heavy lifting</p>
+                        <ul class="equipment-details">
+                            <li>Multiple capacity options</li>
+                            <li>Certified operators</li>
+                            <li>Safety equipment included</li>
+                            <li>24/7 support</li>
+                        </ul>
+                        <div class="equipment-price">
+                            <span>Starting from ₹25,000/day</span>
+                        </div>
+                        <button class="rent-btn">Rent Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rent-info">
+        <div class="rent-info-container">
+            <div class="info-card">
+                <h3>Why Rent From Us?</h3>
+                <ul>
+                    <li>Well-maintained equipment</li>
+                    <li>Competitive rates</li>
+                    <li>Flexible rental terms</li>
+                    <li>24/7 support</li>
+                    <li>Operator training available</li>
+                    <li>Maintenance included</li>
+                    <li>Delivery and pickup service</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>Rental Process</h3>
+                <ol>
+                    <li>Choose your equipment</li>
+                    <li>Select rental duration</li>
+                    <li>Book online or call us</li>
+                    <li>Pick up or get delivery</li>
+                    <li>Return when done</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-links">
+                    <a href="index.html#about">about us</a>
+                    <a href="index.html#projects">projects</a>
+                    <a href="index.html#carriers">careers</a>
+                    <a href="index.html#rent">rent</a>
+                    <a href="index.html#contact">contact</a>
+                </div>
+                <hr class="footer-divider">
+                <p>Maa Jhadeswari Constructions, Sambalpur, Odisha, India - 768001</p>
+                <p>Phone: +91 1234567891 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Email: info@mjconstructions.com</p>
+            </div>
+        </div>
+        
+        <div class="footer-logo">
+            <div class="footer-line"></div>
+            <img src="./Assets/MJC_bg-2.png" alt="MJ Constructions Logo">
+            <div class="footer-line"></div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 MJ Constructions. All rights reserved.</p>
+            <p class="credit">Created and designed by Aayush Sith</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
