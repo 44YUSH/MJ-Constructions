@@ -20,6 +20,7 @@
                 <li><a href="index.html#projects">projects</a></li>
                 <li><a href="index.html#carriers">careers</a></li>
                 <li><a href="index.html#rent">rent</a></li>
+                <li><a href="index.html#buy">buy</a></li>
                 <li><a href="index.html#contact">contact</a></li>
             </ul>
         </div>
@@ -40,6 +41,7 @@
                 <li><a href="index.html#projects">projects</a></li>
                 <li><a href="index.html#carriers">careers</a></li>
                 <li><a href="index.html#rent">rent</a></li>
+                <li><a href="index.html#buy">buy</a></li>
                 <li><a href="index.html#contact">contact</a></li>
             </div>
         </div>
@@ -71,6 +73,14 @@
         <div class="projects-hero-content">
             <h1>Our <span class="gradient-text">Projects</span></h1>
             <p>Discover our journey of building better infrastructure</p>
+        </div>
+    </section>
+
+    <section id="projects-description">
+        <div class="projects-desc-container">
+            <h2>Building Tomorrow's Infrastructure Today</h2>
+            <p>At MJ Constructions, we take pride in delivering exceptional road construction projects that connect communities and drive economic growth. Our portfolio showcases a diverse range of infrastructure projects, from national highways to urban road networks, each designed with precision engineering and sustainable practices.</p>
+            <p>With years of expertise and a commitment to quality, we've successfully completed numerous projects across the region, earning the trust of governments, businesses, and communities. Our projects stand as a testament to our dedication to building roads that last.</p>
         </div>
     </section>
 
@@ -220,9 +230,40 @@
                             <option value="" disabled selected>Select Subject</option>
                             <option value="project">Project Inquiry</option>
                             <option value="career">Career Opportunity</option>
+                            <option value="rent">Equipment Rental</option>
+                            <option value="buy">Buy Materials</option>
                             <option value="support">Support</option>
                             <option value="other">Other</option>
                         </select>
+                    </div>
+                    
+                    <div class="form-group" id="equipment-selector" style="display: none;">
+                        <div style="display: flex; gap: 20px; align-items: center;">
+                            <select id="equipment" name="equipment" style="flex: 1;">
+                                <option value="" disabled selected>Select Equipment</option>
+                                <option value="excavator">Excavator</option>
+                                <option value="bulldozer">Bulldozer</option>
+                                <option value="road-roller">Road Roller</option>
+                                <option value="crane">Crane</option>
+                                <option value="loader">Loader</option>
+                                <option value="other-equipment">Other Equipment</option>
+                            </select>
+                            <div style="flex: 1;">
+                                <input type="number" id="rental-days" name="rental-days" min="1" max="365" placeholder="Number of Days" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem;">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group" id="material-selector" style="display: none;">
+                        <div style="display: flex; gap: 20px; align-items: center;">
+                            <select id="material" name="material" style="flex: 1;">
+                                <option value="" disabled selected>Select Material</option>
+                                <option value="bm">BM</option>
+                                <option value="dbm">DBM</option>
+                                <option value="sdbc">SDBC</option>
+                            </select>
+                            <input type="number" id="quantity" name="quantity" min="1" placeholder="Quantity in Tons" style="flex: 1; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem;">
+                        </div>
                     </div>
                     
                     <div class="form-group">
@@ -244,6 +285,7 @@
                     <a href="index.html#projects">projects</a>
                     <a href="index.html#carriers">careers</a>
                     <a href="index.html#rent">rent</a>
+                    <a href="index.html#buy">buy</a>
                     <a href="index.html#contact">contact</a>
                 </div>
                 <hr class="footer-divider">

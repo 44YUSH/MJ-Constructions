@@ -174,7 +174,7 @@ nav.scrolled {
 }
 
 .menu-links.open {
-    max-height: 300px;
+    max-height: 350px;
     padding: 10px 0;
 }
 
@@ -603,10 +603,6 @@ nav.scrolled {
         margin: 1.5rem auto;
     }
 
-    .founder-container {
-        padding: 0 0.5rem;
-    }
-
     .founder-quote {
         margin-top: 0.75rem;
         padding: 0.5rem;
@@ -699,7 +695,7 @@ nav.scrolled {
 
     .timeline-item .year {
         left: 30px;
-        transform: none;
+    transform: none;
     }
 
     .timeline-item .content {
@@ -1805,6 +1801,19 @@ footer {
 .projects-hero-content h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.projects-hero-content h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(135deg, #FF6B00, #FFA500);
+    border-radius: 2px;
 }
 
 .projects-hero-content p {
@@ -1814,6 +1823,8 @@ footer {
 
 #all-projects {
     padding: 4rem 0;
+    background: linear-gradient(135deg, #06233C 0%, #105FA2 100%);
+    color: white;
 }
 
 .project-details {
@@ -1881,8 +1892,8 @@ footer {
 
 #rent {
     padding: 4rem 2rem;
-    background: linear-gradient(135deg, #06233C 0%, #105FA2 100%);
-    color: white;
+    background: white;
+    color: #06233C;
 }
 
 .rent-container {
@@ -1891,7 +1902,7 @@ footer {
 }
 
 #rent .section-title {
-    color: white;
+    color: #06233C;
     text-align: center;
     font-size: 2.5rem;
     font-weight: 700;
@@ -1915,7 +1926,7 @@ footer {
 .rent-intro {
     text-align: center;
     font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: #666;
     margin-bottom: 3rem;
 }
 
@@ -1991,6 +2002,8 @@ footer {
     width: 70%;
     margin: 20px auto 20px auto;
     display: block;
+    text-decoration: none;
+    text-align: center;
 }
 
 .rent-btn:hover {
@@ -2277,5 +2290,447 @@ footer {
     
     .equipment-price span {
         font-size: 1rem;
+    }
+}
+
+#projects-description {
+    padding: 2.5rem 2rem;
+    background: white;
+    color: #06233C;
+    text-align: center;
+}
+
+.projects-desc-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.projects-desc-container h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #06233C 0%, #105FA2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    display: inline-block;
+}
+
+.projects-desc-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.projects-desc-container p:last-child {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .projects-desc-container h2 {
+        font-size: 1.8rem;
+    }
+    
+    .projects-desc-container p {
+        font-size: 0.95rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #projects-description {
+        padding: 2rem 1rem;
+    }
+    
+    .projects-desc-container h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Buy Section Styles */
+#buy {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #06233C 0%, #105FA2 100%);
+    color: white;
+}
+
+.buy-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#buy .section-title {
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#buy .section-title::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #FF6B00 0%, #FFA500 100%);
+    margin: 0.5rem auto;
+}
+
+.buy-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 3rem;
+}
+
+.materials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.material-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid;
+    border-image: linear-gradient(135deg, #06233C 0%, #105FA2 100%) 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+}
+
+.material-card:hover {
+    transform: translateY(-5px);
+}
+
+.material-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    background-color: #f8f9fa;
+}
+
+.material-card h3 {
+    color: #06233C;
+    margin: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.material-card p {
+    color: #666;
+    margin: 0 1rem 1rem;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.material-card .price {
+    color: #105FA2;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 0 1rem 1rem;
+    text-align: center;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+}
+
+.price-disclaimer {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin: 1rem 0 2rem 0;
+    padding: 0 1rem;
+}
+
+.price-disclaimer-container {
+    background: linear-gradient(135deg, #FF6B00 0%, #FFA500 100%);
+    margin: 2rem 0;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+}
+
+.price-disclaimer-container .price-disclaimer {
+    color: white;
+    font-weight: 600;
+    font-size: 1.4rem;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.material-details {
+    list-style: none;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+.material-details li {
+    color: #666;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.material-details li:before {
+    content: "✓";
+    color: #105FA2;
+    position: absolute;
+    left: 0;
+}
+
+.buy-btn {
+    background: linear-gradient(to right, rgba(16, 95, 162, 0.9) 0%, rgba(6, 35, 60, 0.9) 100%);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(16, 95, 162, 0.3);
+    width: 70%;
+    margin: 20px auto 20px auto;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+}
+
+.buy-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 113, 51, 0.4);
+    background: linear-gradient(to right, rgba(255, 113, 51, 0.9) 0%, rgba(255, 167, 76, 0.9) 50%, rgba(255, 113, 51, 0.9) 100%);
+}
+
+.main-buy-btn-container {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.main-buy-btn {
+    background: linear-gradient(135deg, #FF6B00 0%, #FFA500 100%);
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+}
+
+.main-buy-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 107, 0, 0.4);
+    background: linear-gradient(135deg, #FFA500 0%, #FF6B00 100%);
+}
+
+.buy-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.buy-info .info-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border: 1px solid #e0e0e0;
+}
+
+.buy-info .info-card h3 {
+    color: #06233C;
+    margin-bottom: 1rem;
+}
+
+.buy-info .info-card ul, .buy-info .info-card ol {
+    padding-left: 1.5rem;
+}
+
+.buy-info .info-card li {
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .materials-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .buy-info {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    #buy .section-title {
+        font-size: 2rem;
+    }
+    
+    .main-buy-btn {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+
+    .material-card {
+        margin: 0 1rem;
+    }
+
+    .material-card h3 {
+        font-size: 1.3rem;
+        margin: 0.8rem;
+    }
+
+    .material-card p {
+        font-size: 0.9rem;
+        margin: 0 0.8rem 0.8rem;
+    }
+
+    .buy-btn {
+        width: 80%;
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+
+    #buy {
+        padding: 3rem 1rem;
+    }
+
+    .buy-intro {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #buy {
+        padding: 2rem 0.5rem;
+    }
+    
+    #buy .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .buy-intro {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .material-card {
+        margin: 0 0.5rem;
+        border-radius: 8px;
+    }
+
+    .material-card h3 {
+        font-size: 1.2rem;
+        margin: 0.6rem;
+    }
+
+    .material-card p {
+        font-size: 0.85rem;
+        margin: 0 0.6rem 0.6rem;
+    }
+    
+    .main-buy-btn {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+
+    .buy-btn {
+        width: 85%;
+        padding: 6px 12px;
+        font-size: 0.75rem;
+    }
+
+    .buy-info .info-card {
+        padding: 1.5rem;
+        margin: 0 0.5rem;
+    }
+
+    .buy-info .info-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .buy-info .info-card li {
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #buy .section-title {
+        font-size: 1.6rem;
+    }
+
+    .material-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .material-card p {
+        font-size: 0.8rem;
+    }
+
+    .buy-btn {
+        width: 90%;
+        font-size: 0.7rem;
+    }
+
+    .main-buy-btn {
+        padding: 8px 20px;
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .materials-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .material-card {
+        margin: 0 0.5rem;
+    }
+
+    #buy .section-title {
+        font-size: 2.2rem;
+    }
+
+    .buy-intro {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .materials-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .material-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     }
 }
