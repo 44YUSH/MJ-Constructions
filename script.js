@@ -150,4 +150,38 @@ document.addEventListener('DOMContentLoaded', function() {
         materialSelect.addEventListener('change', calculatePrice);
         quantityInput.addEventListener('input', calculatePrice);
     }
+
+    // Expand/collapse project cards in all-projects section
+    const projectCards = document.querySelectorAll('#all-projects .project-card');
+    projectCards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            // Prevent nested clicks from bubbling (e.g., clicking inside .project-more-details)
+            if (e.target.closest('.project-more-details')) return;
+            // Collapse any other expanded card
+            projectCards.forEach(otherCard => {
+                if (otherCard !== card) {
+                    otherCard.classList.remove('expanded');
+                }
+            });
+            // Toggle this card
+            card.classList.toggle('expanded');
+        });
+    });
+
+    // Expand/collapse project cards in index.html projects section
+    const indexProjectCards = document.querySelectorAll('#projects .project-card');
+    indexProjectCards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            // Prevent nested clicks from bubbling (e.g., clicking inside .project-more-details)
+            if (e.target.closest('.project-more-details')) return;
+            // Collapse any other expanded card
+            indexProjectCards.forEach(otherCard => {
+                if (otherCard !== card) {
+                    otherCard.classList.remove('expanded');
+                }
+            });
+            // Toggle this card
+            card.classList.toggle('expanded');
+        });
+    });
 });
