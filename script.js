@@ -184,4 +184,29 @@ document.addEventListener('DOMContentLoaded', function() {
             card.classList.toggle('expanded');
         });
     });
+
+    // Carousel functionality for Uparmunda project in projects.html
+    document.querySelectorAll('.carousel[data-project="uparmunda"]').forEach(carousel => {
+        const images = carousel.querySelectorAll('.carousel-image');
+        const leftBtn = carousel.querySelector('.carousel-btn.left');
+        const rightBtn = carousel.querySelector('.carousel-btn.right');
+        let current = 0;
+
+        function showImage(idx) {
+            images.forEach((img, i) => {
+                img.classList.toggle('active', i === idx);
+            });
+        }
+
+        leftBtn.addEventListener('click', e => {
+            e.stopPropagation();
+            current = (current - 1 + images.length) % images.length;
+            showImage(current);
+        });
+        rightBtn.addEventListener('click', e => {
+            e.stopPropagation();
+            current = (current + 1) % images.length;
+            showImage(current);
+        });
+    });
 });
