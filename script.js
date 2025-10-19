@@ -185,6 +185,35 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Handle rent/buy/apply button clicks to scroll to contact form
+    document.querySelectorAll('.rent-btn, .buy-btn, .apply-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const form = document.getElementById('contact-form');
+            if (form) {
+                form.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'start' 
+                });
+                
+                // Auto-select the appropriate subject based on button type
+                const subjectSelect = document.getElementById('subject');
+                if (subjectSelect) {
+                    if (this.classList.contains('rent-btn')) {
+                        subjectSelect.value = 'rent';
+                    } else if (this.classList.contains('buy-btn')) {
+                        subjectSelect.value = 'buy';
+                    } else if (this.classList.contains('apply-btn')) {
+                        subjectSelect.value = 'career';
+                    }
+                    
+                    // Trigger change event to show conditional fields
+                    subjectSelect.dispatchEvent(new Event('change'));
+                }
+            }
+        });
+    });
+
     // Carousel functionality for Uparmunda project in projects.html
     document.querySelectorAll('.carousel[data-project="uparmunda"]').forEach(carousel => {
         const images = carousel.querySelectorAll('.carousel-image');
