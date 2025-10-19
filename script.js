@@ -185,6 +185,52 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Handle contact form submission for all pages
+    const contactForms = document.querySelectorAll('.contact-form');
+    contactForms.forEach(contactForm => {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Set reply-to field to user's email
+            const emailInput = contactForm.querySelector('input[name="email"]');
+            const replyToField = contactForm.querySelector('input[name="_replyto"]');
+            if (emailInput && replyToField) {
+                replyToField.value = emailInput.value;
+            }
+            
+            // Show loading state
+            const submitBtn = contactForm.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            // Submit form
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: new FormData(contactForm),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Message sent successfully! We will get back to you soon.');
+                    contactForm.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            })
+            .catch(error => {
+                alert('Sorry, there was an error sending your message. Please try again or contact us directly.');
+                console.error('Form submission error:', error);
+            })
+            .finally(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
+        });
+    });
+
     // Handle rent/buy/apply button clicks to scroll to contact form
     document.querySelectorAll('.rent-btn, .buy-btn, .apply-btn').forEach(btn => {
         btn.addEventListener('click', function(e) {
