@@ -185,17 +185,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Handle contact form submission for all pages
-    const contactForms = document.querySelectorAll('.contact-form');
-    contactForms.forEach(contactForm => {
-        contactForm.addEventListener('submit', function() {
-            const emailInput = contactForm.querySelector('input[name="email"], #email');
-            const nameInput = contactForm.querySelector('input[name="name"], #name');
-            if (!emailInput || !emailInput.value) return; // allow native validation
-            // pass-through: let the native submission happen
-        });
-    });
-
     // Handle rent/buy/apply button clicks to scroll to contact form
     document.querySelectorAll('.rent-btn, .buy-btn, .apply-btn').forEach(btn => {
         btn.addEventListener('click', function(e) {
