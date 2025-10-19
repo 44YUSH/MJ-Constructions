@@ -188,71 +188,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle contact form submission for all pages
     const contactForms = document.querySelectorAll('.contact-form');
     contactForms.forEach(contactForm => {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Set reply-to field to user's email
-            const emailInput = contactForm.querySelector('input[name="email"]');
-            const replyToField = contactForm.querySelector('input[name="_replyto"]');
-            if (emailInput && replyToField) {
-                replyToField.value = emailInput.value;
-            }
-            
-            // Show loading state
-            const submitBtn = contactForm.querySelector('.submit-btn');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-            
-            // Submit form
-            fetch(contactForm.action, {
-                method: 'POST',
-                body: new FormData(contactForm),
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => {
-                if (response.ok) {
-                    alert('Message sent successfully! We will get back to you soon.');
-                    contactForm.reset();
-                } else {
-                    return response.json().then(data => {
-                        throw new Error(data.error || 'Form submission failed');
-                    });
-                }
-            })
-            .catch(error => {
-                console.error('Form submission error:', error);
-                // Fallback: try direct form submission
-                const formData = new FormData(contactForm);
-                const params = new URLSearchParams(formData);
-                
-                // Create a temporary form for fallback submission
-                const tempForm = document.createElement('form');
-                tempForm.method = 'POST';
-                tempForm.action = contactForm.action;
-                tempForm.style.display = 'none';
-                
-                // Add all form data
-                for (const [key, value] of formData.entries()) {
-                    const input = document.createElement('input');
-                    input.type = 'hidden';
-                    input.name = key;
-                    input.value = value;
-                    tempForm.appendChild(input);
-                }
-                
-                document.body.appendChild(tempForm);
-                tempForm.submit();
-                
-                alert('Message sent successfully! We will get back to you soon.');
-                contactForm.reset();
-            })
-            .finally(() => {
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            });
+        contactForm.addEventListener('submit', function() {
+            const emailInput = contactForm.querySelector('input[name="email"], #email');
+            const nameInput = contactForm.querySelector('input[name="name"], #name');
+            if (!emailInput || !emailInput.value) return; // allow native validation
+            // pass-through: let the native submission happen
         });
     });
 
