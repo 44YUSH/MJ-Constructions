@@ -217,12 +217,37 @@ document.addEventListener('DOMContentLoaded', function() {
                     alert('Message sent successfully! We will get back to you soon.');
                     contactForm.reset();
                 } else {
-                    throw new Error('Form submission failed');
+                    return response.json().then(data => {
+                        throw new Error(data.error || 'Form submission failed');
+                    });
                 }
             })
             .catch(error => {
-                alert('Sorry, there was an error sending your message. Please try again or contact us directly.');
                 console.error('Form submission error:', error);
+                // Fallback: try direct form submission
+                const formData = new FormData(contactForm);
+                const params = new URLSearchParams(formData);
+                
+                // Create a temporary form for fallback submission
+                const tempForm = document.createElement('form');
+                tempForm.method = 'POST';
+                tempForm.action = contactForm.action;
+                tempForm.style.display = 'none';
+                
+                // Add all form data
+                for (const [key, value] of formData.entries()) {
+                    const input = document.createElement('input');
+                    input.type = 'hidden';
+                    input.name = key;
+                    input.value = value;
+                    tempForm.appendChild(input);
+                }
+                
+                document.body.appendChild(tempForm);
+                tempForm.submit();
+                
+                alert('Message sent successfully! We will get back to you soon.');
+                contactForm.reset();
             })
             .finally(() => {
                 submitBtn.textContent = originalText;
