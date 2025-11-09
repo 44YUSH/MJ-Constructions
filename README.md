@@ -6,7 +6,7 @@ This project showcases the portfolio, history, services, and equipment rental op
 ---
 
 ## 🌐 Live Preview
-👉 [https://mj-constructions.vercel.app](#)
+https://mj-constructions.vercel.app
 
 ---
 
